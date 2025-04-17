@@ -1,38 +1,44 @@
-# Woodstock: Using Twitter Sentiments to Predict Stock Price Change
+# Woodstock: Using Twitter Sentiments to Predict Stock Price Movements
 
 ## Overview
 
-**Woodstock** is a real-time stock price prediction system powered by sentiment analysis of tweets. By analyzing public sentiment on Twitter regarding specific companies and the stock market, this project aims to identify patterns and correlations with stock price changes. The goal is to assist investors and analysts in making better-informed decisions.
+**Woodstock** is a real-time stock prediction system powered by sentiment analysis of Twitter data. By evaluating public sentiment surrounding companies and market trends, the project identifies correlations between social media buzz and stock price fluctuations. The goal is to help investors and analysts make data-driven decisions.
 
  **Live Demo:** [Hugging Face Deployment](https://huggingface.co/spaces/Knight-coderr/StockAnalysis)
 
 ---
 
-## Architecture
+## System Architecture
 
 1. **Data Collection**  
-   Tweets are collected using the Twitter API and Tweepy. Data is streamed via Amazon Kinesis and stored as CSV files in S3 using AWS Lambda. Live stock prices are fetched from the Alpha Vantage API. A trigger updates real-time data in Amazon DynamoDB.
+   - Tweets are collected via the Twitter API using Tweepy.
+   - Streaming is handled through Amazon Kinesis.
+   - Tweets are stored as CSV files in S3 via AWS Lambda.
+   - Live stock prices are fetched using the Alpha Vantage API.
+   - Real-time data updates are triggered and stored in Amazon DynamoDB.
 
 2. **Sentiment Analysis**  
-   TextBlob is used to perform sentiment analysis on tweets in real time.
+   - Sentiments are extracted from tweets using **TextBlob** in real time.
 
 3. **Data Integration**  
-   Sentiment scores are merged with historical stock prices for training.
+   - Sentiment scores are aligned with historical stock price data for modeling.
 
 4. **Predictive Modeling**  
-   Models including Random Forest, Gradient Boosting, SVR, and XGBoost were tested. XGBoost provided the best results after tuning.
+   - Multiple models were tested: Random Forest, Gradient Boosting, SVR, and XGBoost.
+   - **XGBoost** performed best after hyperparameter tuning.
 
 5. **ML Lifecycle Management**  
-   MLflow tracks experiment metrics and registers the best model for production.
+   - **MLflow** is used to track experiments and manage model versions.
 
 6. **User Interface**  
-   A Streamlit application lets users select a stock and time range to analyze sentiment and predict stock price changes. The app is deployed on Hugging Face Spaces.
+   - A **Streamlit** web app allows users to select stocks, view sentiment trends, and forecast price changes.
+   - Deployed via **Hugging Face Spaces**.
 
 ---
 
 ## Benchmarking & Results
 
-### Model Comparison (Mean Squared Error - MSE)
+### Model Performance (Mean Squared Error - MSE)
 
 | Model             | Best Parameters                             | MSE        |
 |------------------|----------------------------------------------|------------|
@@ -43,42 +49,41 @@
 
 ---
 
-
 ## Tech Stack
 
-- **Languages & Libraries:** Python, Pandas, NumPy, Scikit-learn, XGBoost, TextBlob
-- **Data Sources:** Twitter API, Alpha Vantage API
-- **Cloud Services:** AWS Lambda, S3, DynamoDB
-- **Model Tracking:** MLflow
-- **Web App:** Streamlit
-- **Deployment:** Hugging Face Spaces
-- **Version Control:** Git, GitHub
+- **Languages & Libraries:** Python, Pandas, NumPy, Scikit-learn, XGBoost, TextBlob  
+- **APIs & Data Sources:** Twitter API, Alpha Vantage API  
+- **Cloud Services:** AWS Lambda, S3, DynamoDB  
+- **Model Tracking:** MLflow  
+- **Web Framework:** Streamlit  
+- **Deployment Platform:** Hugging Face Spaces  
+- **Version Control:** Git & GitHub
 
 ---
 
 ## Methodology
 
-1. **Data Collection:** Tweets and stock prices were collected over a 6-month period.
-2. **Sentiment Analysis:** Performed using TextBlob on real-time tweets.
-3. **Modeling:** Predictive models were trained using stock and sentiment data.
-4. **Evaluation:** Models were evaluated using MSE, R², and MAE metrics.
-5. **Conclusion:** TextBlob was effective for sentiment, and XGBoost outperformed other models in price prediction.
+1. **Data Collection:** Tweets and stock prices gathered over a 6-month period.
+2. **Sentiment Analysis:** Conducted in real time using TextBlob.
+3. **Model Training:** Trained on combined stock and sentiment features.
+4. **Evaluation:** Models assessed with MSE, R², and MAE.
+5. **Conclusion:** TextBlob proved effective for quick sentiment analysis, while XGBoost yielded the best predictive performance.
 
 ---
 
-## Future Work
+## Future Improvements
 
-- Upgrade sentiment analysis using transformer models like BERT.
-- Expand data sources (e.g., Reddit, financial news).
-- Improve model explainability using SHAP or LIME.
-- Integrate portfolio-level analysis and optimization.
+- Enhance sentiment analysis using transformer models like **BERT**.
+- Incorporate additional sources (e.g., Reddit, financial news).
+- Improve explainability with **SHAP** or **LIME**.
+- Expand to portfolio-level analysis and optimization.
 
 ---
 
 ## Contributors
 
-- Soumalya Mondal ( M24DE2031 )
-- Joel Paul ( M24DE2012 )
+- **Soumalya Mondal** (M24DE2031)  
+- **Joel Paul** (M24DE2012)
 
 ---
 
