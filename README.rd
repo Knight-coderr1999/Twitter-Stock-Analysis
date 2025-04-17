@@ -4,7 +4,7 @@
 
 **Woodstock** is a real-time stock price prediction system powered by sentiment analysis of tweets. By analyzing public sentiment on Twitter regarding specific companies and the stock market, this project aims to identify patterns and correlations with stock price changes. The goal is to assist investors and analysts in making better-informed decisions.
 
-- **Live Demo:** [Hugging Face Deployment](https://huggingface.co/spaces/Knight-coderr/StockAnalysis)
+ **Live Demo:** [Hugging Face Deployment](https://huggingface.co/spaces/Knight-coderr/StockAnalysis)
 
 ---
 
@@ -84,6 +84,6 @@
 
 ## References
 
-- Twitter Developer API
-- Alpha Vantage Stock API
-- TextBlob for Sentiment Analysis
+- [Twitter Developer API](https://developer.twitter.com/)  
+- [Alpha Vantage API](https://www.alphavantage.co/)  
+- [TextBlob](https://textblob.readthedocs.io/en/dev/) for Sentiment Analysis
