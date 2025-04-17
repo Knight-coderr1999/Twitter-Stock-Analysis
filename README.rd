@@ -1,14 +1,14 @@
 # Woodstock: Using Twitter Sentiments to Predict Stock Price Movements
 
-## Overview
+## 🧠 Overview
 
 **Woodstock** is a real-time stock prediction system powered by sentiment analysis of Twitter data. By evaluating public sentiment surrounding companies and market trends, the project identifies correlations between social media buzz and stock price fluctuations. The goal is to help investors and analysts make data-driven decisions.
 
- **Live Demo:** [Hugging Face Deployment](https://huggingface.co/spaces/Knight-coderr/StockAnalysis)
+👉 **Live Demo:** [Hugging Face Deployment](https://huggingface.co/spaces/Knight-coderr/StockAnalysis)
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
 1. **Data Collection**  
    - Tweets are collected via the Twitter API using Tweepy.
@@ -36,7 +36,7 @@
 
 ---
 
-## Benchmarking & Results
+## 📊 Benchmarking & Results
 
 ### Model Performance (Mean Squared Error - MSE)
 
@@ -49,7 +49,7 @@
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 - **Languages & Libraries:** Python, Pandas, NumPy, Scikit-learn, XGBoost, TextBlob  
 - **APIs & Data Sources:** Twitter API, Alpha Vantage API  
@@ -61,7 +61,7 @@
 
 ---
 
-## Methodology
+## 🔍 Methodology
 
 1. **Data Collection:** Tweets and stock prices gathered over a 6-month period.
 2. **Sentiment Analysis:** Conducted in real time using TextBlob.
@@ -71,7 +71,7 @@
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
 - Enhance sentiment analysis using transformer models like **BERT**.
 - Incorporate additional sources (e.g., Reddit, financial news).
@@ -80,14 +80,14 @@
 
 ---
 
-## Contributors
+## 👥 Contributors
 
 - **Soumalya Mondal** (M24DE2031)  
 - **Joel Paul** (M24DE2012)
 
 ---
 
-## References
+## 📚 References
 
 - [Twitter Developer API](https://developer.twitter.com/)  
 - [Alpha Vantage API](https://www.alphavantage.co/)  
