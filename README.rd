@@ -77,8 +77,8 @@
 
 ## Contributors
 
-- [Soumalya Mondal ( M24DE2031 )]
-- [Joel Paul ( M24DE2012 )]
+- Soumalya Mondal ( M24DE2031 )
+- Joel Paul ( M24DE2012 )
 
 ---
 
